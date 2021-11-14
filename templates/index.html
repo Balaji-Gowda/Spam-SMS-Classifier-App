@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="static/style.css" />
+  </head>
+  <body>
+    <div name="divelement">
+      <h1>SPAM SMS Classifier App using ML and NLP</h1>
+      <form action="/pred" method="post">
+        <br />
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Enter Your Name"
+        /><br /><br /><br />
+        <textarea
+          id="sms"
+          name="sms"
+          cols="50"
+          rows="5"
+          placeholder="Enter Your SMS"
+        ></textarea
+        ><br /><br />
+        <input type="submit" id="submit" name="Click here" value="Predict" />
+        <br /><br />
+      </form>
+      {%if res==1%}
+      <h2 id="one">{{prd}}</h2>
+      {%else%}
+      <h2 id="zero">{{prd}}</h2>
+      {%endif%}
+    </div>
+  </body>
+</html>

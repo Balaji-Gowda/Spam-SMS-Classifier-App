@@ -1,0 +1,50 @@
+body {
+  text-align: center;
+  background-image: url("techbg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: aliceblue;
+  margin-top: 100px;
+}
+
+h1 {
+  color: black;
+  background-color: cyan;
+  display: inline-block;
+  padding: 10px;
+}
+#name {
+  width: 300px;
+  height: 30px;
+  box-shadow: blue;
+  background-color: antiquewhite;
+}
+#lab {
+  color: greenyellow;
+}
+#sms {
+  box-shadow: blue;
+  background-color: antiquewhite;
+}
+#submit {
+  border-style: dashed;
+  border-radius: 20px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: darkorange;
+}
+
+#one {
+  background-color: green;
+  padding: 10px;
+  display: inline-block;
+  box-shadow: 1px 1px 5px 4px lightgreen;
+}
+
+#zero {
+  background-color: red;
+  padding: 10px;
+  display: inline-block;
+  box-shadow: 1px 1px 5px 4px lightcoral;
+}

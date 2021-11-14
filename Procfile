@@ -1,1 +1,1 @@
-web: gunicorn app:spam
+web: gunicorn --bind 0.0.0.0:$PORT flaskapp:spam

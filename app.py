@@ -12,7 +12,7 @@ from flask import Flask, redirect, render_template, request, url_for
 mod_pick = pickle.load(open('model.pkl', 'rb'))
 trans_pick = pickle.load(open('transform.pkl', 'rb'))
 
-spam = Flask(__name__)
+app = Flask(__name__)
 
 
 #########################################################################################################
@@ -67,18 +67,18 @@ score = accuracy_score(y_test, pred)
 ######################################################################################################
 
 
-@spam.route('/')
+@app.route('/')
 def index():
     return render_template("index.html")
 
 
-@spam.route('/results/<val>')
+@app.route('/results/<val>')
 def results(val):
     val = val
     return render_template('result.html', prd=val)
 
 
-@spam.route('/pred', methods=['POST', 'GET'])
+@app.route('/pred', methods=['POST', 'GET'])
 def predict():
     msg = ""
     prd = 23
@@ -106,4 +106,4 @@ def predict():
 
 
 if __name__ == "__main__":
-    spam.run(debug=True)
+    app.run(debug=True)

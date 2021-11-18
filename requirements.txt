@@ -1,5 +1,4 @@
-anaconda-client==1.7.2
-anaconda-navigator==2.0.3.
+
 appdirs==1.4.4
 argh==0.26.2
 atomicwrites==1.4.0

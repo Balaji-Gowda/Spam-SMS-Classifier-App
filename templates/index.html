@@ -11,7 +11,7 @@
   <body>
     <div name="divelement">
       <h1>SPAM SMS Classifier App using ML and NLP</h1>
-      <form action="/pred" method="post">
+      <form action="{{ url_for('predict')}}" method="post">
         <br />
         <input
           type="text"

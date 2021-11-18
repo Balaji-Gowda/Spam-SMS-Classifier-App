@@ -72,17 +72,11 @@ def index():
     return render_template("index.html")
 
 
-@app.route('/results/<val>')
-def results(val):
-    val = val
-    return render_template('result.html', prd=val)
-
-
-@app.route('/pred', methods=['POST', 'GET'])
+@app.route('/predict', methods=['POST'])
 def predict():
     msg = ""
     prd = 23
-    prd1=''
+    prd1 = ''
     op_x = 7
     res = ''
     name = ''

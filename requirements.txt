@@ -12,3 +12,4 @@ scipy>=0.15.1
 matplotlib>=1.4.3
 wordnet
 reuters
+nltk.download('stopwords')

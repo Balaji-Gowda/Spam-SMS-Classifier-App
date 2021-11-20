@@ -96,7 +96,7 @@ def predict():
         prd1 = 'Hello '+name+' Your Message is: '+res
 
     # return redirect(url_for('results', val='Hello '+name+' Your Message is: '+res))
-    return render_template('index.html',  prd=prd1, res=prd)
+    return render_template('result.html',  prd=prd1, res=prd)
 
 
 if __name__ == "__main__":

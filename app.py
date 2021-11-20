@@ -3,10 +3,11 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer
 from nltk.stem import PorterStemmer, SnowballStemmer
+import nltk
 nltk.download('stopwords')
 from nltk.corpus import stopwords
 import re
-import nltk
+
 import pickle
 import pandas as pd
 from flask import Flask, redirect, render_template, request, url_for

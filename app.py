@@ -1,3 +1,8 @@
+from flask import Flask, redirect, render_template, request, url_for
+import pandas as pd
+import pickle
+import re
+from nltk.corpus import stopwords
 from sklearn.metrics import confusion_matrix, accuracy_score
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.model_selection import train_test_split
@@ -5,12 +10,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 from nltk.stem import PorterStemmer, SnowballStemmer
 import nltk
 nltk.download('stopwords')
-from nltk.corpus import stopwords
-import re
 
-import pickle
-import pandas as pd
-from flask import Flask, redirect, render_template, request, url_for
 mod_pick = pickle.load(open('model.pkl', 'rb'))
 trans_pick = pickle.load(open('transform.pkl', 'rb'))
 
@@ -98,7 +98,7 @@ def predict():
         prd1 = 'Hello '+name+' Your Message is: '+res
 
     # return redirect(url_for('results', val='Hello '+name+' Your Message is: '+res))
-    return render_template('result.html',  prd=prd1, res=prd)
+    return render_template('index.html',  prd=prd1, res=prd)
 
 
 if __name__ == "__main__":
